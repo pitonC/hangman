@@ -19,7 +19,7 @@ print("dame letra")
 
 intentos = ''
 
-turnos = 12
+turnos = 6
 
 print (Fore.RED)
 while turnos > 0:
@@ -42,7 +42,6 @@ while turnos > 0:
 
         print("ganastes")
 
-        # this print the correct palabra
         print("la palabra es: ", palabra)
         break
 
@@ -52,12 +51,75 @@ while turnos > 0:
 
     if intento not in palabra:
 
+
+
+
         turnos -= 1
 
-        print("error")
+        print("error. intenta otra letra")
+
 
         print("aun te quedan", + turnos, 'intentos')
 
+        if turnos == 5:
+            print("""
+          +---+
+          |   |
+          O   |
+              |
+              |
+              |
+        =========""")
+
+        if turnos == 4:
+            print("""
+          +---+
+          |   |
+          O   |
+          |   |
+              |
+              |
+        =========""")
+
+        if turnos == 3:
+            print("""
+          +---+
+          |   |
+          O   |
+         /|   |
+              |
+              |
+        =========""")
+        if turnos == 2:
+            print("""
+          +---+
+          |   |
+          O   |
+         /|\  |
+              |
+              |
+        =========""")
+        if turnos == 1:
+            print("""
+                    +---+
+                    |   |
+                    O   |
+                   /|\  |
+                   /    |
+                        |
+                  =========""")
+
+
+
 
         if turnos == 0:
+            print("""
+              +---+
+              |   |
+              O   |
+             /|\  |
+             / \  |
+                  |
+            =========""")
             print("fin de la partida, has perdido")
+            exit()
